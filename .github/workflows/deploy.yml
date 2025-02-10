@@ -52,11 +52,11 @@ jobs:
             fi
 
             # Build the Docker image
-            docker build -t hello-wissem .
+            docker build -t nestapp .
 
             # Stop and remove existing container (if exists)
-            docker stop hello-wissem || true
-            docker rm hello-wissem || true
+            docker stop nestapp || true
+            docker rm nestapp || true
 
             # Run new container
-            docker run -d --name hello-wissem -p 3000:3000 nestapp
+            docker run -d --name nestapp -p 3000:3000 nestapp
